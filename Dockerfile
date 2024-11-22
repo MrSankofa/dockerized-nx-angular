@@ -14,7 +14,7 @@ COPY . .
 RUN npm run build:my-workspace
 
 # Step 2: Serve the app with Nginx
-FROM nginx:alpine
+FROM nginx:latest
 
 COPY --from=build /app/dist/my-workspace /usr/share/nginx/html
 
